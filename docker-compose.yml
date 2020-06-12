@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    image: node-demo
+    build: .
+    container_name: node-demo
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/home/app
+    command: npm run dev
